@@ -1,0 +1,344 @@
+:root {
+    --seasonsGroundColor: rgb(144, 187, 87);
+}
+
+body {
+    background: rgb(83, 0, 0);
+    color: rgb(55, 202, 202);
+    display: flex;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.painting {
+    flex-shrink: 0;
+    overflow: hidden;
+    border-left: 20px ridge rgb(199, 171, 13);
+    border-top: 20px ridge rgb(219, 192, 34);
+    border-right: 20px ridge rgb(145, 126, 19);
+    border-bottom: 20px ridge rgb(168, 146, 23);
+    margin-left: 200px;
+}
+
+
+/* Seasons painting */
+#seasons {
+    width: 600px;
+    height: 400px;
+}
+
+#seasons .ground {
+    height: 100px;
+    background: var(--seasonsGroundColor);
+    background: linear-gradient(var(--seasonsGroundColor), rgb(15, 131, 77));
+    box-shadow: 0px -5px 5px 5px var(--seasonsGroundColor);
+}
+
+#seasonsTree {
+    position: relative;
+    left: 450px;
+    top: -160px;
+    width: 40px;
+    height: 250px;
+    background: linear-gradient(90deg, #703a25, #642210, #3a140a);
+    filter: drop-shadow(0px 0 5px #75361d);
+    box-sizing: border-box;
+}
+
+#seasonsTreeLeaves {
+    width: 220px;
+    height: 220px;
+    border-radius: 150px 0;
+    transform: rotate(-45deg);
+    position: relative;
+    top: -70px;
+    left: -90px;
+    background: radial-gradient(circle at top, #c7c412, #3a3208 90%);
+}
+
+#seasons .background {
+    height: 300px;
+    background-color: rgb(41, 128, 128);
+    background: linear-gradient(rgb(32, 109, 109), rgb(126, 212, 212));;
+}
+
+#seasonsSun {
+    position: relative;
+    left: 100px;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: gold;
+    animation: sunlight 6s infinite;
+}
+
+.cloud {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px 50px 0 0;
+    background-color: antiquewhite;
+    filter: drop-shadow(0 0 3px antiquewhite);
+}
+
+.cloud::before {
+    content: "";
+    position: absolute;
+    left: 80px;
+    top: 25px;
+    width: 50px;
+    height: 25px;
+    border-radius: 50px 50px 0 0;
+    background-color: antiquewhite;
+}
+
+.cloud::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 30px;
+    width: 40px;
+    height: 20px;
+    border-radius: 50px 50px 0 0;
+    background-color: antiquewhite;
+}
+
+.leaf {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(168, 76, 14, 0.9);
+    border-radius: 50% 0;
+}
+
+.leaf::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 12px;
+    transform: rotate(45deg);
+    border: 5px solid transparent;
+    border-bottom: 90px solid rgb(78, 28, 28);
+}
+
+@keyframes sunlight {
+    0% {
+        box-shadow: 0px 0px 25px 5px orange, 0px 0px 15px 5px rgb(212, 132, 12) inset;
+    }
+    50% {
+        box-shadow: 0px 0px 35px 15px rgb(212, 132, 12), 0px 0px 15px 5px orange inset;
+    }
+    100% {
+        box-shadow: 0px 0px 25px 5px orange, 0px 0px 15px 5px rgb(212, 132, 12) inset;
+    }
+}
+
+/* Tower Painting */
+#watchTower {
+    width: 300px;
+    height: 500px;
+}
+
+#watchTower .background {
+    width: 300px;
+    height: 500px;
+    background: rgb(68, 94, 84);
+    box-shadow: 0px 0 200px 40px rgb(4, 4, 27) inset;
+}
+
+#watchTower .ground {
+    position: relative;
+    top: -150px;
+    left: -110px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: rgb(27, 22, 16);
+    filter: drop-shadow(0 0 2px rgb(27, 22, 16));
+}
+
+#tower {
+    position: relative;
+    top: -150px;
+    left: 280px;
+    width: 70px;
+    height: 180px;
+    background: linear-gradient(90deg, rgb(34, 33, 33), rgb(53, 49, 49), rgb(34, 33, 33));
+}
+
+#tower::before {
+    content: "";
+    position: relative;
+    display: block;
+    top: 140px;
+    left: 25px;
+    width: 20px;
+    height: 40px;
+    background: rgb(17, 17, 17);
+    border-radius: 10px 10px 0 0;
+}
+
+#towerRoof {
+    position: relative;
+    top: -100px;
+    left: -25px;
+    width: 120px;
+    height: 80px;
+    background: linear-gradient(-45deg, rgb(20, 2, 2), rgb(95, 8, 8));
+    clip-path: polygon(50% 0%, 10% 100%, 90% 100%);
+}
+
+#towerMonster {
+    opacity: 0;
+    position: relative;
+    top: 30px;
+    left: 50px;
+    width: 200px;
+    height: 500px;
+    background: black;
+    border-radius: 400px 400px;
+    box-shadow: 0 0 15px 10px black;
+}
+
+#towerMonster::before {
+    content: "";
+    position: relative;
+    display: block;
+    top: 120px;
+    left: -70px;
+    width: 350px;
+    height: 350px;
+    transform: rotate(45deg);
+    background: black;
+    box-shadow: 0 0 15px 10px black;
+}
+
+#towerEyesLeft {
+    position: relative;
+    top: -270px;
+    left: 25px;
+    height: 20px;
+    width: 40px;
+    border-radius: 0 0 150px 150px;
+    background: radial-gradient(circle at right, rgb(206, 69, 27) 10%, rgb(87, 1, 1) 50%);
+    transform: rotate(25deg);
+}
+
+#towerEyesRight {
+    position: relative;
+    top: -290px;
+    left: 150px;
+    height: 20px;
+    width: 40px;
+    border-radius: 0 0 150px 150px;
+    background: radial-gradient(circle at left, rgb(206, 69, 27) 10%, rgb(87, 1, 1) 50%);
+    transform: rotate(-25deg);
+}
+
+.lightningbackground {
+    animation: lightningBolt 1s ease-in-out;
+}
+
+@keyframes lightningBolt {
+    0% { background: rgb(68, 94, 84); }
+    50% { background: rgb(173, 216, 200); }
+}
+
+.aMonsterCalls {
+    animation: aMonsterCalls 1s;
+}
+
+@keyframes aMonsterCalls {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+
+/* Stars Painting */
+#stars {
+    border-radius: 50%;
+    width: 250px;
+    height: 180px;
+}
+
+#stars .background {
+    width: 250px;
+    height: 180px;
+    background: rgb(4, 4, 31);
+}
+
+.star {
+    position: relative;
+    width: 7px;
+    height: 7px;
+    background: whitesmoke;
+    border-radius: 50%;
+}
+
+
+/* Portrait */
+#portrait {
+    width: 250px;
+    height: 350px;
+}
+
+#portrait .background {
+    width: 100%;
+    height: 100%;
+    background: teal;
+}
+
+#portrait #head {
+    position: relative;
+    width: 150px;
+    height: 200px;
+    background: salmon;
+    top: -35vh;
+    left: 5.5vw;
+    border-radius: 46%;
+}
+
+#portrait #head .eye {
+    overflow: hidden;
+    position: relative;
+    top: 60px;
+    width: 40px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#portrait #head .eye:nth-child(1) {
+    left: 20px;
+}
+
+#portrait #head .eye:nth-child(2) {
+    left: 90px;
+    top: 40px;
+}
+
+#portrait #head .eye .iris {
+    position: relative;
+    left: 12px;
+    top: 1px;
+    width: 8px;
+    height: 8px;
+    background: black;
+    border-radius: 50%;
+    border: 5px solid rgb(72, 72, 219);
+}
+
+#portrait #head #nose {
+    position: relative;
+    width: 20px;
+    height: 80px;
+    background: brown;
+    left: 65px;
+    top: 30px;
+    border-radius: 10px 10px;
+}
